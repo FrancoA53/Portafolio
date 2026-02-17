@@ -347,7 +347,7 @@ const education = [
 ];
 
 
-const experience = [f
+const experience = [
   {
     id: 4,
     position: { es: "Programador AV | Integrador de sistema", en: "AV Programmer | Systems Integrator" },
