@@ -337,7 +337,7 @@ const education = [
   {
     id: 1,
     degree: { es: "Técnico Mecánico - Eléctrico", en: "Mechanical - Electrical Technician" },
-    institution: { es: "Instituto Nuestra Señora de Fátima", en: "Instituto Nuestra Señora de Fátima" },
+    institution: { es: "Instituto Técnico Nuestra Señora de Fátima", en: "Instituto Técnico Nuestra Señora de Fátima" },
     years: "2010 - 2016",
     description: {
       es: "Formación técnica con base en electricidad y mecánica: electricidad domiciliaria y básica, armado y verificación de circuitos, mediciones con instrumentos, interpretación de planos y mecanizado/trabajo de materiales. Enfoque práctico orientado a instalación, mantenimiento y resolución de fallas.",
@@ -347,7 +347,7 @@ const education = [
 ];
 
 
-const experience = [
+const experience = [f
   {
     id: 4,
     position: { es: "Programador AV | Integrador de sistema", en: "AV Programmer | Systems Integrator" },
@@ -406,7 +406,7 @@ const contactInfo = [
     icon: "mail",
     title: { es: "Correo", en: "Email" },
     value: "francoareco53@gmail.com",
-    link: "mailto:tuemail@correo.com",
+    link: "mailto:francoareco53@gmail.com",
   },
   {
     icon: "github",
