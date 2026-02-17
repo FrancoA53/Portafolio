@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Franco Areco - Portfolio</title>
+  <meta name="description" content="Programador AV | Integrador de sistema. Automatización, control e integración de soluciones audiovisuales." />
+  <meta name="author" content="Franco Areco" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="shortcut icon" href="./Assets/Imagenes/Logo-sin-nombre.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" /> 
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav id="navigation" class="nav">
+    <div class="container nav-container">
+      <button class="nav-logo" onclick="scrollToSection('hero')">Franco Areco</button>
+
+      <div class="nav-links">
+        <button onclick="scrollToSection('hero')" data-es="Inicio" data-en="Home">Inicio</button>
+        <button onclick="scrollToSection('about')" data-es="Sobre mí" data-en="About">Sobre mí</button>
+        <button onclick="scrollToSection('skills')" data-es="Habilidades" data-en="Skills">Habilidades</button>
+        <button onclick="scrollToSection('projects')" data-es="Proyectos" data-en="Projects">Proyectos</button>
+        <button onclick="scrollToSection('education')" data-es="Formación" data-en="Education">Formación</button>
+        <button onclick="scrollToSection('experience')" data-es="Experiencia" data-en="Experience">Experiencia</button>
+        <button onclick="scrollToSection('contact')" data-es="Contacto" data-en="Contact">Contacto</button>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Theme -->
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme" type="button">
+          <svg class="icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon sun-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Language -->
+        <div class="dropdown">
+          <button class="icon-btn" id="language-toggle" aria-label="Change language" type="button">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </button>
+
+          <div class="dropdown-menu" id="language-menu">
+            <button onclick="setLanguage('es')"><img src="./Assets/Imagenes/es.png" alt="argentina-flag"> Español</button>
+            <button onclick="setLanguage('en')"><img src="./Assets/Imagenes/en.png" alt="uk-flag"> English</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="hero-background" aria-hidden="true">
+      <!-- ✅ VANTA.NET se monta acá -->
+      <div id="vanta-bg"></div>
+      <!-- overlay para contraste -->
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-content">
+      <p class="hero-greeting" data-es="Hola, soy" data-en="Hello, I'm">Hola, soy</p>
+      <h1 class="hero-name">Franco Areco</h1>
+      <h2 class="hero-title" data-es="Programador AV | Integrador de sistema" data-en="AV Programmer | Systems Integrator">
+        Programador AV | Integrador de sistema
+      </h2>
+      <p class="hero-subtitle"
+         data-es="Del código al último cable: integro sistemas AV que suenan, se ven y responden como deben."
+         data-en="From code to the last cable: I integrate AV systems that sound, look and respond the way they should.">
+        Del código al último cable: integro sistemas AV que suenan, se ven y responden como deben.
+      </p>
+    </div>
+
+    <button class="scroll-down" onclick="scrollToSection('about')" aria-label="Scroll down" type="button">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title" data-es="Sobre mí" data-en="About Me">Sobre mí</h2>
+
+      <div class="about-content">
+        <div class="about-photo">
+          <div class="photo-glow"></div>
+          <div class="photo-wrapper">
+            <!-- Cambiá la imagen por la tuya -->
+            <img src="./Assets/Imagenes/Perfil.jpeg" alt="Franco Areco - AV Programmer" />
+          </div>
+        </div>
+
+        <div class="about-text">
+          <p
+            data-es="Soy Franco Areco, Programador AV e Integrador de Sistemas, enfocado en automatización y control para que una sala funcione de manera confiable, consistente y simple para el usuario final. Me especializo en traducir necesidades reales (operación diaria, soporte, mantenimiento, tiempos de uso) en soluciones implementables: lógica de control, ruteo de señales, puesta en marcha, documentación y acompañamiento post-instalación. Mi trabajo combina control, audio, video y redes: desde la integración de equipos y el armado de arquitectura de señal, hasta la configuración y optimización de infraestructura (direccionamiento, switching, troubleshooting) para que todo responda como debe. Tengo experiencia en entornos corporativos y técnicos donde la prioridad es la estabilidad: escenas claras, estados previsibles, automatizaciones que no “sorprendan” y una interfaz que el usuario entienda sin capacitación. Además, mi formación en Sonido me aporta una mirada extra sobre calidad y verificación: criterios de audio, medición, ajustes y control de consistencia en sala. Me gusta trabajar con metodologías ordenadas, priorizando buenas prácticas, checklist de commissioning, registro de cambios y entrega final prolija."
+            data-en="I am Franco Areco, AV Programmer and Systems Integrator, focused on automation and control so that a room functions reliably, consistently, and simply for the end user. I specialise in translating real needs (daily operation, support, maintenance, usage times) into implementable solutions: control logic, signal routing, commissioning, documentation, and post-installation support. My work combines control, audio, video, and networking: from equipment integration and signal architecture assembly to infrastructure configuration and optimisation (addressing, switching, troubleshooting) so that everything responds as it should. I have experience in corporate and technical environments where stability is a priority: clear scenes, predictable states, automations that do not ‘surprise’ and an interface that the user understands without training. In addition, my training in sound gives me an extra perspective on quality and verification: audio criteria, measurement, adjustments, and consistency control in the room. I like to work with orderly methodologies, prioritising best practices, commissioning checklists, change logs, and neat final delivery.">
+            Soy Franco Areco, Programador AV e Integrador de Sistemas, enfocado en automatización y control para que una sala funcione de manera confiable, consistente y simple para el usuario final. Me especializo en traducir necesidades reales (operación diaria, soporte, mantenimiento, tiempos de uso) en soluciones implementables: lógica de control, ruteo de señales, puesta en marcha, documentación y acompañamiento post-instalación. Mi trabajo combina control, audio, video y redes: desde la integración de equipos y el armado de arquitectura de señal, hasta la configuración y optimización de infraestructura (direccionamiento, switching, troubleshooting) para que todo responda como debe. Tengo experiencia en entornos corporativos y técnicos donde la prioridad es la estabilidad: escenas claras, estados previsibles, automatizaciones que no “sorprendan” y una interfaz que el usuario entienda sin capacitación. Además, mi formación en Sonido me aporta una mirada extra sobre calidad y verificación: criterios de audio, medición, ajustes y control de consistencia en sala. Me gusta trabajar con metodologías ordenadas, priorizando buenas prácticas, checklist de commissioning, registro de cambios y entrega final prolija.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-es="Habilidades" data-en="Skills">Habilidades</h2>
+
+      <div class="skills-carousel" id="skills-carousel">
+        <div class="skills-track" id="skills-track"></div>
+      </div>
+
+      <div id="skill-tooltip" class="skill-tooltip">
+        <div class="skill-tooltip-content">
+          <button id="skill-tooltip-close" class="skill-tooltip-close" type="button">&times;</button>
+          <h4 id="skill-tooltip-title"></h4>
+          <p id="skill-tooltip-description"></p>
+        </div>
+        <div class="skill-tooltip-arrow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title" data-es="Proyectos" data-en="Projects">Proyectos</h2>
+
+      <div class="filters">
+        <button class="filter-btn active" data-es="Todos" data-en="All">Todos</button>
+        <button class="filter-btn" data-es="Control" data-en="Control">Control</button>
+        <button class="filter-btn" data-es="DSP" data-en="DSP">DSP</button>
+        <button class="filter-btn" data-es="Electroacústica" data-en="Electroacoustics">Electroacústica</button>
+        <button class="filter-btn" data-es="Acústica" data-en="Acoustics">Acústica</button>
+      </div>
+
+
+      <div class="projects-grid" id="projects-grid"></div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-es="Formación" data-en="Education">Formación</h2>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <div id="education-timeline"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title" data-es="Experiencia" data-en="Experience">Experiencia</h2>
+      <div class="experience-list" id="experience-list"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-es="Contacto" data-en="Contact">Contacto</h2>
+      <div class="contact-grid" id="contact-grid"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-text"
+         data-es="© 2026 Creado y diseñado por Franco Areco. Todos los derechos reservados."
+         data-en="© 2026 Created and designed by Franco Areco. All rights reserved.">
+        © 2026 Creado y diseñado por Franco Areco. Todos los derechos reservados.
+      </p>
+
+      <button class="btn btn-outline" onclick="scrollToTop()" type="button">
+        <span data-es="Volver arriba" data-en="Back to top">Volver arriba</span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="12" y1="19" x2="12" y2="5"></line>
+          <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+      </button>
+    </div>
+  </footer>
+
+  <!-- ✅ ORDEN CORRECTO: THREE -> VANTA -> TU SCRIPT -->
+  <script src="./Assets/three.r134.min.js"></script>
+
+  <!-- Cambiá esta línea si tu archivo se llama distinto -->
+  <script src="./Assets/vanta.net.min.js"></script>
+  <!-- Ejemplo si el tuyo es sin .min: <script src="./Assets/vanta.net.js"></script> -->
+
+  <script src="./script.js"></script>
+</body>
+</html>

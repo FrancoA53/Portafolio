@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vanta Test</title>
+  <style>
+    html, body { height: 100%; margin: 0; background: #111; color: #fff; font-family: system-ui; }
+    #vanta-bg { position: fixed; inset: 0; }
+    #debug {
+      position: fixed; top: 12px; left: 12px; z-index: 9999;
+      background: rgba(0,0,0,.7); padding: 10px 12px; border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.2);
+      font-size: 14px;
+    }
+    .big {
+      position: fixed; inset: 0; display: grid; place-items: center;
+      z-index: 10; text-align: center; pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="vanta-bg"></div>
+
+  <div id="debug">Cargando…</div>
+
+  <div class="big">
+    <div>
+      <h1>Test VANTA.NET</h1>
+      <p>Si ves líneas/puntos moviéndose, funciona.</p>
+    </div>
+  </div>
+
+  <!-- 1) THREE primero -->
+  <script src="./Assets/three.r134.min.js"></script>
+
+  <!-- 2) VANTA después (OJO el nombre: vanta, no venta) -->
+  <!-- Cambiá esta línea si tu archivo se llama distinto -->
+  <script src="./Assets/vanta.net.min.js"></script>
+  <!-- o: <script src="./Assets/vanta.net.js"></script> -->
+
+  <script>
+    window.addEventListener("load", () => {
+      const okThree = !!window.THREE;
+      const okVanta = !!window.VANTA;
+      const okNet = !!(window.VANTA && window.VANTA.NET);
+
+      const dbg = document.getElementById("debug");
+      dbg.textContent = `THREE=${okThree} | VANTA=${okVanta} | NET=${okNet}`;
+
+      if (!okThree || !okVanta || !okNet) {
+        dbg.textContent += "  ❌  (RUTA/NOMBRE/ORDEN MAL)";
+        return;
+      }
+
+      // Fondo bien contrastado para VERLO sí o sí
+      window.__v = VANTA.NET({
+        el: "#vanta-bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        backgroundColor: 0x111111,
+        color: 0x00ffaa,
+        points: 12.0,
+        maxDistance: 22.0,
+        spacing: 16.0,
+        showDots: true
+      });
+
+      dbg.textContent += "  ✅  (INICIALIZADO)";
+    });
+  </script>
+</body>
+</html>
